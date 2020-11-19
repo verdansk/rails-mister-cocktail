@@ -1,0 +1,24 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">List of all the Cocktails</h1>
+    <p class="lead">What's for drinks!</p>
+  </div>
+</div>
+<div class="wrapper">
+<div class="card-group">
+<% @cocktails.each do |cocktail| %>
+  <div class="card">
+    <img src="https://source.unsplash.com/random" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title"><%= cocktail.name %></h5>
+      <p class="card-text btn btn-primary"><%= link_to "Check", cocktail_path(cocktail) %></p>
+      <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+    </div>
+  </div>
+<% end %>
+</div>
+  <div class="add-cocktail">
+    <h2 class="form-header">Add a Cocktail</h2>
+    <%= render 'form', cocktail: @new_cocktail, class: "form-field"%>
+  </div>
+</div>

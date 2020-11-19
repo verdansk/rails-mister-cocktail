@@ -1,1 +1,52 @@
 // Specific CSS for your home-page
+.wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 40px;
+  margin: auto 30px;
+}
+
+.card-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px;
+}
+
+.card {
+  height: fit-content;
+}
+
+.card img {
+    height: 400px;
+    object-fit: cover;
+  }
+
+.card-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-body a {
+  color: white;
+}
+
+.card-title {
+  margin: 0px;
+}
+
+.form-header {
+  padding: 20px 10px;
+  border-radius: 5px 5px 0px 0px;
+  background-color: $blue;
+  color: white;
+}
+
+.add-cocktail {
+  background-color: white;
+  height: 400px;
+}
+
+.new_cocktail {
+  padding: 20px 10px;
+}
