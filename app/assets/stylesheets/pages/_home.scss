@@ -6,6 +6,50 @@
   margin: auto 30px;
 }
 
+.img-box {
+  background: {
+   image: asset_url("homepage.jpg")
+  }
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-box {
+  h1 {
+    color: white;
+  }
+  display: grid;
+  width: 600px;
+  text-align: center;
+}
+
+.fa-lock {
+  color: white;
+  font-size: 5em;
+}
+
+.fa-lock:hover {
+   color: black;
+  }
+
+.center-fit {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.wrapper-home {
+  width: 100%;
+  object-fit: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .card-group {
   display: grid;
   grid-template-columns: 1fr 1fr;
