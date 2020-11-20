@@ -1,24 +1,53 @@
-<div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-4">List of all the Cocktails</h1>
-    <p class="lead">What's for drinks!</p>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+  Add a Cocktail
+        </button>
+      </li>
+    </ul>
   </div>
 </div>
-<div class="wrapper">
-<div class="card-group">
-<% @cocktails.each do |cocktail| %>
-  <div class="card">
-    <img src="https://source.unsplash.com/random" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title"><%= cocktail.name %></h5>
-      <p class="card-text btn btn-primary"><%= link_to "Check", cocktail_path(cocktail) %></p>
-      <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+
+<!-- MODAL -->
+
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">Add a Cocktail</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <%= render 'form', cocktail: @new_cocktail, class: "form-field"%>
+      </div>
     </div>
   </div>
-<% end %>
 </div>
-  <div class="add-cocktail">
-    <h2 class="form-header">Add a Cocktail</h2>
-    <%= render 'form', cocktail: @new_cocktail, class: "form-field"%>
+
+<!-- COCKTAILS -->
+
+
+<div class="wrapper">
+
+  <div class="card-group">
+  <% @cocktails.each do |cocktail| %>
+     <div class="card">
+      <%= image_tag("https://source.unsplash.com/featured/?#{cocktail.name}", class: "inner-card-img") %>
+        <div class="card-body">
+          <h5 class="card-title"><%= cocktail.name %></h5>
+          <p class="card-text btn btn-primary"><%=  link_to "Check it out", cocktail_path(cocktail) %></p>
+        </div>
+    </div>
+  <% end %>
   </div>
 </div>

@@ -1,9 +1,9 @@
 // Specific CSS for your home-page
 .wrapper {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr;
   grid-gap: 40px;
-  margin: auto 30px;
+  margin: auto 60px;
 }
 
 .img-box {
@@ -52,17 +52,19 @@
 
 .card-group {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 40px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 60px;
+  margin-top: 90px;
 }
 
 .card {
   height: fit-content;
 }
 
-.card img {
-    height: 400px;
+.inner-card-img {
+    height: 300px;
     object-fit: cover;
+    width: 100%;
   }
 
 .card-body {
