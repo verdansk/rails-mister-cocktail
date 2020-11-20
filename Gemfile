@@ -53,3 +53,4 @@ gem 'open-uri'
 gem 'json'
 gem 'faker'
 gem 'rest-client'
+gem 'dotenv-rails', groups: [:development, :test]
